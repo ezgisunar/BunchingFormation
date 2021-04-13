@@ -37,10 +37,6 @@ As a remind that Ws, energy of synchronous particle will be calculated at each s
 
 Some explanations about procedures that I use and problems that I face with 
 ----------------------
-There is a data input set including 9-columns and N lines. This file is read by "partdist.hpp" and storing one-dimensional vectors for each column. These information is the initial distribution that I want to use it for the simulation.
-
-
-
 9 sutunluk parametre ve N-satirdan olusan bir veri dosyam var. Bu bilgileri "partdist.hpp" den her sutundaki bilgiyi tek boyutlu vectorlere yazdiriyorum ve baslangic bilgilerimi depolamis oluyorum. 
 
 Bu aldigim bilgileri manual'de elle tanimladigim fonksiyonlarin icine atarak sirayla iterate ettiriyorum. Bu fonksiyonlar aslinda simulasyonumda kullanmak istedigim elementlerin tepkilerini iceren fonksiyonlar. (eg. QUAD dedigim sey aslinda 4-kutuplu bir miknatis. Bu miknatis transverse direction'nin bir yonunde parcaciklari converge ediyor, diger yonde diverge.) Yani bu fonksiyonlar input vectorleri aliyor, output vectorleri olusturuyor. Ben bu birbirini takip eden input-output dongusel vectorleri elimde tutmak istiyorum cunku bazen plot etmek, bazen depolanan bilgileri kullanarak kapladiklari alani, olusturduklari envelope'u hesaplamak icin kullanmak istiyorum. Bu sebeple bu vectorleri silip geri kullanamiyorum ya da bu amacimi gerceklestirecek recursive bir dongu olusturamadim kafamda. 
