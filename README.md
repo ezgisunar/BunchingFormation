@@ -5,8 +5,8 @@ One of them has a general purpose for users. The code should be easily adjusted 
   1. MAIN : Interface to input and output data; common data base for exchange between subroutines;control of processes (subroutine calls).
   2. PLOT : Starting of results for plotting; use of libraries of an external plotting software.
   3. GUI : basic tools for easier code handling by the users.
-The second main part or purpose is the special tasks or subroutine implementations. These subroutines that we call are "Accelerator Elements", "Space Charge Kick", and "Generation of an input particle distribution". 
-  1. Acc. Elem. :
+The second main part or purpose is the special tasks or subroutine implementations. These subroutines that we call are "Accelerator Elements", "Space Charge Kick", and "Generation of an input particle distribution". \\
+  1. Acc. Elem. :\\
     (a) "GAP"   (Veff,φs)
     (b) "DRIFT" (length, aperture)
     (c) "LENS"  (length, gradient - [T/m], polarity, aperture) – Quadrupole - Solenoid
