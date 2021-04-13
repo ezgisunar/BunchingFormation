@@ -57,3 +57,5 @@ Main function ile baslayalim.
 
 Buradaki ilk problem InputSetup.hpp dosyasinda tanimlayamaya calistigim "Parameters" class ile ilgili. Bunu tam olarak nasil kullanacagimi bilemedigim icin design'
 da kullanacagim sabit parametre degerleri icin olusturdum. Bu parametrelerin degelerin user tarafindan configuration file'dan okunarak alinacak ve tum algorithma boyunca sabit kalacak. 
+
+InputSetup.hpp -> partdist.hpp [ -> PhaseSpace.txt ] -> Drift.hpp ; Emit.hpp ; Gap.hpp ; .... 
