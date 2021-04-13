@@ -19,7 +19,7 @@
 using namespace std;
 
 //  for compiling : $ g++ BunForDC_wo_root.cpp -o BunForDC_wo_root.exe
-//  for  running  : $./ BunForDC_wo_root.exe 
+//  for  running  : $ ./ BunForDC_wo_root.exe 
 int main()
 {
 //This class is defined in the InputSeteup.hpp file. 
@@ -79,42 +79,11 @@ partdist(xx_0i, xxp_0i, yy_0i, yyp_0i, phi_0i, ww_0i, dphi_0i, dww_0i);
 // design is starting by manually typing the order og the structure.
 // later on, this structure try to read from a configuration file.
 int num_har = 1;
-	
-	Drift(num_har,lambda, gamma, beta, L_s,xx_0i, xxp_0i, yy_0i, yyp_0i, xx_1i, xxp_1i, yy_1i, yyp_1i, phi_0i, phi_1i, dphi_0i, dphi_1i, dww_0i);			
-	Emit( xx_1i, xxp_1i, ww_0i) ;
-	Gap(num_har, W_s1, lambda, gamma, beta, L_s, xx_1i, xxp_1i, yy_1i, yyp_1i, xx_2i, xxp_2i, yy_2i, yyp_2i, phi_1i, ww_0i, phi_2i, ww_1i, dphi_1i, dphi_2i, dww_0i, dww_1i); 
-	Emit( xx_2i, xxp_2i, ww_1i) ;
+	Emit(xx_0i, xxp_0i, ww_0i);
+	Drift(num_har, lambda, gamma, beta, L_s, xx_0i, xxp_0i, yy_0i, yyp_0i, xx_1i, xxp_1i, yy_1i, yyp_1i, phi_0i, phi_1i, dphi_0i, dphi_1i, dww_0i);
+	Emit(xx_1i, xxp_1i, ww_0i);
+	Gap(num_har, W_s1, lambda, gamma, beta, L_s, xx_1i, xxp_1i, yy_1i, yyp_1i, xx_2i, xxp_2i, yy_2i, yyp_2i, phi_1i, ww_0i, phi_2i, ww_1i, dphi_1i, dphi_2i, dww_0i, dww_1i);
+	Emit(xx_2i, xxp_2i, ww_1i);
 
-int sign_B = 0;
-int num_step = 5;
-double Length_m = 0;
-double step_width = L_m / num_step;
-	for (int i = 0; i < num_step; i++)
-	{
-			Length_m = Length_m + step_width;
-		Quad(sign_B, Length_m, num_har, lambda, gamma, beta, L_s, xx_2i, xxp_2i, yy_2i, yyp_2i, xx_3i, xxp_3i, yy_3i, yyp_3i, ww_1i);	
-			xx_2i.clear();	xxp_2i.clear();
-			yy_2i.clear();	yyp_2i.clear();
-		for (int j = 0; j < xx_3i.size(); j++)
-		{
-			xx_2i.push_back(xx_3i[j]);
-			xxp_2i.push_back(xxp_3i[j]);
-		}
-		for (int j = 0; j < yy_3i.size(); j++)
-		{
-			yy_2i.push_back(yy_3i[j]);
-			yyp_2i.push_back(yyp_3i[j]);
-		}
-		if (i <= num_step - 2)
-		{
-			xx_3i.clear();	xxp_3i.clear();
-			yy_3i.clear();	yyp_3i.clear();
-		}
-		else
-			continue;
-}
-	Emit(xx_3i, xxp_3i, ww_1i) ;
-	Drift(num_har, lambda, gamma, beta, L_s, xx_3i, xxp_3i, yy_3i, yyp_3i, xx_4i, xxp_4i, yy_4i, yyp_4i, phi_2i, phi_3i, dphi_2i, dphi_3i, dww_1i);
-
-	return 0;
+return 0;
 }
