@@ -1,17 +1,18 @@
 The aim and process of the program
 ----
 # BunchingFormation
-This algorithm is based on a concept of a beam dynamics code which adopted to a low energy hybrid (f-2f) DTL structure. The program of this algorithm can be divided into two main parts. 
+This algorithm is based on a concept of a beam dynamics code which adopted to a low energy hybrid (f-2f) DTL structure. The program of this algorithm can be divided into two main parts.
+---------------------
 One of them has a general purpose for users. The code should be easily adjusted and compiled with an external platform by users who are not familiar with the programming but focus on designing. Therefore, the "General" purpose can be studied under 3 sub-purposes which we called as "Main", " Plot", "GUI".
   1. MAIN : Interface to input and output data; common data base for exchange between subroutines;control of processes (subroutine calls).
   2. PLOT : Starting of results for plotting; use of libraries of an external plotting software.
   3. GUI : basic tools for easier code handling by the users.
-The second main part or purpose is the special tasks or subroutine implementations. These subroutines that we call are "Accelerator Elements", "Space Charge Kick", and "Generation of an input particle distribution". 
- 
+----------------------
+The second main part or purpose is the special tasks or subroutine implementations. These subroutines that we call are "Accelerator Elements", "Space Charge Kick", and "Generation of an input particle distribution".
  1. Accelerator Elements :
-    (a) "GAP"   (Veff,φs)
-    (b) "DRIFT" (Ld, a) - (length of drift, aperture)
-    (c) "LENS"  (Lm, gradient - [T/m], polarity, aperture) – Quadrupole - Solenoid
+    a. "GAP"   (Veff,φs)
+    b. "DRIFT" (Ld, a) - (length of drift, aperture)
+    c. "LENS"  (Lm, gradient - [T/m], polarity, aperture) – Quadrupole - Solenoid
   2. Space Charge
   3. Part. Dist. Gen. : "DIST" – Uniform, Waterbag
 The program can be run as in the following example by writting a structure step by step; 
@@ -25,6 +26,8 @@ The program can be run as in the following example by writting a structure step 
     "DRIFT()"  (9) 
   call for writing Output file
   call Plot
+
+-----------
 We should mention that for users, there will be a configuration txt file to put the necessary values for the design of the concept. The configuration file will include these parameters; 
   A     (atomic mass), 
   q     (charge of the particle), 
