@@ -7,10 +7,11 @@ One of them has a general purpose for users. The code should be easily adjusted 
   2. PLOT : Starting of results for plotting; use of libraries of an external plotting software.
   3. GUI : basic tools for easier code handling by the users.
 The second main part or purpose is the special tasks or subroutine implementations. These subroutines that we call are "Accelerator Elements", "Space Charge Kick", and "Generation of an input particle distribution". 
-  1. Acc. Elem. :
+ 
+ 1. Accelerator Elements :
     (a) "GAP"   (Veff,φs)
-    (b) "DRIFT" (length, aperture)
-    (c) "LENS"  (length, gradient - [T/m], polarity, aperture) – Quadrupole - Solenoid
+    (b) "DRIFT" (Ld, a) - (length of drift, aperture)
+    (c) "LENS"  (Lm, gradient - [T/m], polarity, aperture) – Quadrupole - Solenoid
   2. Space Charge
   3. Part. Dist. Gen. : "DIST" – Uniform, Waterbag
 The program can be run as in the following example by writting a structure step by step; 
