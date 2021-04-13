@@ -2,6 +2,7 @@ The aim and process of the program
 ----
 # BunchingFormation
 This algorithm is based on a concept of a beam dynamics code which adopted to a low energy hybrid (f-2f) DTL structure. The program of this algorithm can be divided into two main parts.
+
 ---------------------
 One of them has a general purpose for users. The code should be easily adjusted and compiled with an external platform by users who are not familiar with the programming but focus on designing. Therefore, the "General" purpose can be studied under 3 sub-purposes which we called as "Main", " Plot", "GUI".
   1. MAIN : Interface to input and output data; common data base for exchange between subroutines;control of processes (subroutine calls).
